@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script course</title>
+</head>
+<body>
+    <script >
+        //break and continue
+      /*  const numero = [1,2,3,4,5,6,7,8,9,10];
+
+        for(let i =0; i < numero.length;i++ ){
+            if(i===5){
+                break;
+            }
+            console.log(numero[i]);
+
+        }// resultado -> 1,2,3,4,5
+
+        for(let i = 0; i < numero.length; i++){
+            if (i === 5) {
+                continue;
+            }
+            console.log(numero[i])
+        }//botará -> 1,2,3,4,6,7,8,9,0
+   
+        //DESTRUCTURACIÓN
+        //sin destructuración(destructuring)
+        let numeros = [1,2,3];
+        let uno = numeros[0];
+        let dos = numeros[1];
+        let tres = numeros[2];
+
+        console.log(uno, dos, tres);//1,2,3
+        
+        //con destructuración
+        const [one, r, three] = numeros// no es necesario de los identificadores sean iguales en arrays
+        console.log(one, r, three); //1,2,3
+
+        let persona = {
+            nombre: "Rodrigo",
+            apellido: "Calle",
+            edad: 23
+        }
+        let {nombre, apellido, edad } = persona;//los identificadores de variables deben ser el mismo
+        console.log(nombre, apellido, edad);
+    //OBJETOS LITERALES
+        let nombre = "Rodrigo",
+        edad = 12;
+
+        const perro = {
+            nombre: nombre,
+            edad: edad, 
+            ladrar: function(){
+                console.log("guaauuu guau");
+            }
+        }
+
+        const dog = {
+            nombre,
+            edad,
+            raza: "Callejero",
+            ladrar(){
+                console.log("guauu guauuu guauu")
+            }
+        }
+
+        console.log(dog);
+        dog.ladrar();
+         
+        //REST PARAMETERS:Agrega parametros infinitos a una variable
+        function sumar(a,b,...c){
+            let resultado = a+b;
+            c.forEach(function(n){
+                resultado += n;
+            })
+
+            return resultado;
+        }
+
+        console.log(sumar(1,2,3));
+        console.log(sumar(1,2,3,4));
+        console.log(sumar(1,2,3,4,5));
+
+        const arr1 = [1,2,3,4,5];
+        arr2 = [6,7,8,9,0];
+       const arr3 = [...arr1, ...arr2]//concatena arrays
+        console.log(arr3)
+        console.log(arr1, arr2); */
+
+        /*const saludar = () => {
+            console.log(`Hola`);
+        }
+
+        saludar();
+
+        const saludar = (nombre) => {
+            console.log(`Hola ${nombre}`);
+        }
+        saludar("Rodrigo");
+
+        const sumar = function(a,b){
+            return a+b;
+        }  
+
+        console.log(sumar(8,4));
+
+        const sumarr = (a,b) => a+b;
+
+        console.log(sumarr(3,2));
+
+        const funcionDeVariasLineas = () => {
+            console.log("Uno"),
+            console.log("Dos")
+        }
+        console.log(funcionDeVariasLineas);
+        const numeros = [1,2,3,4,5];
+
+        numeros.forEach((ele, index) => console.log(`El elemento ${ele} está en la posición ${index}`));
+        
+        /*function Perro(){
+            console.log(this);
+        }
+
+        const perro = {
+        nombre: "kenai",
+        ladrar:function(){
+            console.log(this);
+        }
+
+
+        }
+
+        Perro();*/
+
+        //FUNCION CONSTRUCTORA
+
+        /*   function Animal(nombre, genero){
+                //atributos
+                this.nombre = nombre;
+                this.genero = genero;
+                //metodos
+                this.sonar = function(){console.log("pum pam pum");}
+                this.saludar =  function(){console.log(`hola me llamo ${this.nombre}`);}
+            }
+        */
+
+
+         /*    function Animal(nombre, genero){
+                //atributos
+                this.nombre = nombre;
+                this.genero = genero;
+                
+            }
+
+            
+
+
+            const soopy = new Animal("Snoopy", "macho"), lolaBunny = new Animal("LolaBunny", "hembra");
+
+            console.log(soopy, lolaBunny);
+            
+            lolaBunny.saludar() */
+
+            //HERENCIA PROTOTÍPICA
+    /*         function Animal(nombre, genero){
+                //atributos
+                this.nombre = nombre;
+                this.genero = genero;
+                
+            }
+            //metodos
+            Animal.prototype.sonar = function(){console.log("pum pam pum");}
+            Animal.prototype.saludar =  function(){console.log(`hola me llamo ${this.nombre}`);}
+
+            function Perro(nombre, genero, tamanio){
+                this.super = Animal;
+                this.super(nombre, genero);
+                this.tamanio = tamanio;
+                
+            }       
+
+            //Perro está heredando de Animal
+            Perro.prototype = new Animal();
+            Perro.prototype.constructor = Perro;
+
+                
+            //Sobreescritura del método padre en el hijo
+            Perro.prototype.sonar("hago sonidos de perro");
+
+            var perro1 = new Perro("Balto", "Macho", 70);
+            console.log(perro1.prototype.saludar());
+
+ */         
+            //CLASES EN JS
+            
+            
+
+
+    </script>
+    
+</body>
+</html>

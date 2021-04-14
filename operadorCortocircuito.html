@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+         corotcircuito con OR: valo1 || valor2, cuando valor1 sea TRUE cargará de caso contrario cargará
+         el calor de la derecha(valor2)
+
+
+         cortocircuito con AND: carga el falso
+        */
+
+        function saludo(nombre) {
+
+            nombre = nombre || "Desaconocido";
+            console.log(`Hola como estás ${nombre}`);            
+        }
+
+
+        saludo()//carga el valor verdadero
+        saludo(Rodrigo)
+
+        //AND
+
+        console.log(false&& "Valor TRUE y derecha");//impirmirá en consola el valor de la derecha
+
+
+
+    </script>
+    
+</body>
+</html>

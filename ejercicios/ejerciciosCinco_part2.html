@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+       /*  const dateFun = (anio, mes, dia) =>{
+            let antique = new Date(anio, mes, dia).getFullYear();
+            let today =  new Date().getFullYear();
+
+            return (today-antique);
+        }
+        console.log(dateFun(1998,04,01)) */
+    /* 
+        18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
+        
+        20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero. */
+
+   /*      const contarLetras = (cadena = "") => {
+            if (!cadena)return console.warn("No ingresaste el texto");
+            if(typeof cadena !== "string") return console.error(`El valor "${cadena}" ingresado no es una cadena de text`);
+            let vocales = 0;
+            let consonantes = 0;
+
+            for (let letra of cadena) {
+                if(/[aeiouáéíóúAEIOUÁÉÍÓÚüÜ]/.test(letra)){
+                    vocales++;
+                }  
+                if(/[BCDFGHJKLMNÑPQRSTVWYZbcdfghjklmnñpqrstvwyz]/.test(letra)){
+                    consonantes++;
+                }              
+            }
+            return console.info({
+                cadena: cadena, //tambien funcionaria solo con cadena, vocale, consonantes
+                vocales: vocales,
+                consonantes: consonantes
+            })
+        }
+
+        contarLetras("Hola mundo"); */
+        //19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
+     /*    
+        const validarNombre = (nombre = "") => {
+            if (!nombre)return console.warn("No ingresaste el texto");
+            if(typeof nombre !== "string") return console.error(`El valor "${nombre}" ingresado no es una cadena de text`);
+            let expReg= /^[A-Za-zNñÁÉÍÓÚáéíóú\s]+$/g.test(nombre);
+            return(expReg)
+            ? console.info(`"${nombre}", es un nombre válido`) : console.warn(`"${nombre}", no es un nombre válido`);
+
+        }
+
+        validarNombre();
+        validarNombre(3);
+        validarNombre("Rodrigo Calle"); */
+        //alt + 94 = ^, la ü es alt + 129, alt + 154 = Ü y alt + 92 = \,  para los que como yo no pueden sacarlo en el teclado
+        //20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
+    /* 
+        const validarEmail = (email = "") => {
+            if (!email)return console.warn("No ingresaste el texto");
+            if(typeof email !== "string") return console.error(`El valor "${email}" ingresado no es un email`);
+            let expReg= /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(email);
+            return(expReg)
+            ? console.info(`"${email}", es un email válido`) : console.warn(`"${email}", no es un email válido`);
+    
+        }
+        
+
+        validarEmail("rodrigogmail.com") */
+
+        //FUSION 19-20
+        
+            
+    /*  21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
+        22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
+        23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}. */
+//21
+            /* const potenciaCuadratica = (numeros) =>{
+                let newNum = []
+                numeros.forEach(item => {
+                     newNum.push(item*item);
+                });
+
+                return console.log(newNum);
+            }
+            potenciaCuadratica([2,5,3,4]);
+             */
+//22
+           /*  const mayorYmenor = (numeros) =>{
+                let mayor = 0;
+                let menor = 100000000000000000;
+                numeros.forEach(item => {
+                    if(item > mayor){mayor = item}
+                    if(item < menor) {menor = item}                   
+                });
+
+                return console.info(`el mayor es "${mayor}" y el menor es "${menor}"`);
+            }    
+            mayorYmenor([1, 4, 5, 99, -60])
+            */
+//23    
+     /*        const parEimpar = (numeros) => {
+                let impar = []
+                let par = []
+                numeros.forEach(item => {
+                    if(item%2 == 0){par.push(item)}
+                    if(item%2 !== 0){impar.push(item)}
+                });
+                return console.info(
+                    `Los números pares son: "${par}" y los números impares son: "${impar}" `
+                )
+            }
+             parEimpar([1,2,3,4,5,6,7,8,9,0])
+ */
+
+            /* 24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.
+                25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
+                26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5. */
+/* 
+             const ordenarArray = (numeros = []) => {
+                
+                 let des = []
+                 let asc = []
+
+              
+                function comparar1 ( a, b ){ return a - b; }
+                asc = numeros.sort( comparar1 );
+
+                function comparar2 ( a, b ){ return  b - a; }
+                des = asc
+
+                num = {
+                    ascendentes: asc,
+                    descendentes: des
+                 }
+                return console.log(num); 
+              
+
+             }    
+                ordenarArray([7, 5,7,8,6,100]); */
+            //25
+     /*       const duplicados = (arr) =>{
+                return console.info({
+                        original: arr,
+                        sinDuplicados: arr.filter((value,index,self) => self.indexOf(value)===index)
+                    })
+            }
+
+            duplicados(["x", 10, "x", 2, "10", 10, true, true]); */
+
+            //26
+
+    /*         const promedio = (arr = []) =>{
+                 let prom = 0;
+                for(let i = 0; i < arr.length; i++){
+                    prom = prom+arr[i];
+
+               }
+                prom = prom/arr.length
+                return console.log(prom);
+            }
+            
+            promedio([9,8,7,6,5,4,3,2,1,0]); */
+
+            /* 
+27) Programa una clase llamada Pelicula.
+
+La clase recibirá un objeto al momento de instanciarse con los siguentes datos: id de la película en IMDB, titulo, director, año de estreno, país o países de origen, géneros y calificación en IMBD.
+  - Todos los datos del objeto son obligatorios.
+  - Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 
+     7 restantes números.
+  - Valida que el título no rebase los 100 caracteres.
+  - Valida que el director no rebase los 50 caracteres.
+  - Valida que el año de estreno sea un número entero de 4 dígitos.
+  - Valida que el país o paises sea introducidos en forma de arreglo.
+  - Valida que los géneros sean introducidos en forma de arreglo.
+  - Valida que los géneros introducidos esten dentro de los géneros 
+     aceptados*.
+  - Crea un método estático que devuelva los géneros aceptados*.
+  - Valida que la calificación sea un número entre 0 y 10 pudiendo ser 
+    decimal de una posición.
+  - Crea un método que devuelva toda la ficha técnica de la película.
+  - Apartir de un arreglo con la información de 3 películas genera 3 
+    instancias de la clase de forma automatizada e imprime la ficha técnica 
+    de cada película.
+
+* Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime, 
+Documentary ,Drama, Family, Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music,
+ Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western. */
+                class Pelicula {
+                constructor({ id, titulo, director, estreno, pais, generos, calificacion }) {
+                    this.id = id;
+                    this.titulo = titulo;
+                    this.director = director;
+                    this.estreno = estreno;
+                    this.pais = pais;
+                    this.generos = generos;
+                    this.calificacion = calificacion;
+
+                    this.validarIMDB(id);
+                    this.validarTitulo(titulo);
+                    this.validarDirector(director);
+                    this.validarEstreno(estreno);
+                    //this.validarPais(pais);
+                    //this.validarGeneros(generos);
+                    //this.validarCalificacion(calificacion);
+                }
+
+                validarCadena(propiedad, valor){
+                    if (!valor) return console.warn(`${propiedad} "${valor}" está vacío"`);
+
+                    if (typeof valor !== "string") return console.error(`${propiedad} "${valor}" ingresado, NO es una cadena de texto`);                     
+                    return true;
+                }
+                
+                validarLongitudCadena(propiedad, valor, longitud){
+                    if (valor.length > longitud) { return console.error(`${propiedad} "${valor}" excede el número de caracteres permitidos(${longitud})`);
+                        
+                    }
+                    return true;
+
+                }
+
+                validarNumero(propiedad, valor){
+                    if(valor.length == 0)return console.error(`"${propiedad}" está vacio, por favor digitar un número`);
+                    if(typeof valor !== "number")return console.log(`"${valor}" debe ser un número`);
+                }
+
+                validarArreglo(propiedad, valor) {
+                    if (!valor) return console.warn(`${propiedad} "${valor}" esta vacío`);
+                    if (!(valor instanceof Array))
+                    return console.error(
+                        `${propiedad} "${valor}" ingresado, NO es un arreglo`
+                    );
+                    if (valor.length === 0) return console.error("no tiene datos");
+                    for (let num of valor) {
+                    if (typeof num !== "string") {
+                        return console.error(
+                        `El valor ${num} ingresado no es un cadena de texto`
+                        );
+                    }
+                    }
+
+                    return true;
+                }
+
+
+
+                validarIMDB(id){
+                    if(this.validarCadena("IMDB id", id)){
+                        if (!(/^([a-z]){2}([0-9]){7}$/.test(id))) return console.error(`IMDB id "${id}" no es valido, debe tener 9 caracteres, los 2 primeros letras minpusculas`);                        
+                    }
+                }
+                
+                validarTitulo(titulo){
+                    if(this.validarCadena("Titulo", titulo, 100)){
+                       
+                    }
+                }
+                validarDirector(director){
+                    if(this.validarCadena("Director", director, 50)){
+                       
+                    }
+                }
+                validarEstreno(estreno){
+                    let estre = estreno;
+                    if(this.validarNumero("Estreno", estreno) && estre.toString().length === 4){ }
+                    if(estre.toString().length !== 4){  console.error("El año de estreno debe ser de 4 digitos")}
+                } 
+                validarPais(pais) {
+                    this.validarArreglo("Pais", pais);
+                }
+
+                validarGeneros(generos) {
+                    if (this.validarArreglo("Géneros", generos)) {
+                    for (const genero of generos) {
+                        if (!Pelicula.listaGeneros.includes(genero)) {
+                        console.error(`Géneros incorrectos "${generos.join(", ")}`);
+                        Pelicula.generosAceptados();
+                        }
+                    }
+                    }
+                }
+
+                validarCalificacion(calificacion) {
+                    if (this.validarNumero("Calificación", calificacion))
+                    return calificacion < 0 || calificacion > 10
+                        ? console.error("La calificación tiene que estar entre 0 y 10")
+                        : (this.calificacion = calificacion.toFixed(1));
+                }
+
+                fichaTecnica() {
+                    console.info(
+                    `Ficha Técnica: \nTítulo: ${this.titulo} \nDirector: ${
+                        this.director
+                    }\nAño: ${this.estreno} \nPais: ${this.pais.join(
+                        ", "
+                    )}\nGéneros: ${this.generos.join(", ")}\nCalificación: ${
+                        this.calificacion
+                    }\nIMDB id: ${this.id}`
+                    );
+                }
+            }
+
+            
+
+             const peliculas = [
+            {
+                id: "tt1234567",
+                titulo: "el titulo",
+                director: "Manuel medarno",
+                estreno: 2020,
+                pais: ["Mexico"],
+                generos: ["Comedy", "Sport"],
+                calificacion: 1,
+            },
+            {
+                id: "tt1234567",
+                titulo: "el titulo",
+                director: "Manuel medarno",
+                estreno: 2020,
+                pais: ["Mexico"],
+                generos: ["Comedy", "Sport"],
+                calificacion: 2,
+            },
+            {
+                id: "tt1234567",
+                titulo: "el titulo",
+                director: "Manuel medarno",
+                estreno: 2020,
+                pais: ["Mexico"],
+                generos: ["Comedy", "Sport"],
+                calificacion: 8,
+            },
+            ];
+
+            peliculas.forEach((el) => new Pelicula(el).fichaTecnica());
+
+
+    
+
+
+    </script>
+    
+</body>
+</html>

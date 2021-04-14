@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios 2</title>
+</head>
+<body>
+    <script>
+    /*  5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
+        6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
+        7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+        8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+    */
+
+    //Solución 5
+
+       /*  var pregunta5 = (texto) =>{
+            if (typeof texto === 'string') {
+                 texto = texto.split('').reverse();
+                 return console.log(texto.toString());
+            }else{
+                return console.log("debes ingresar un string como entrada");
+            }
+        }
+        console.log(pregunta5("hola")) */
+
+    //Solucion 6
+       /* 
+        var preguntaSeis = (text, repeatedWord) => { 
+            if(typeof text === 'string'){
+                let find = text.split(" ");
+                let contador = 0;
+          ;
+                find.forEach(element => {
+                    element == repeatedWord ? (contador++) : (console.log("No se encontró la palabra"));
+                });
+         
+            }else{
+                console.log("tienes que ingresar un tipo de dato string");
+            }    
+         }
+         preguntaSeis("hola lola hola bala", "hola"); */
+
+         //Solucion 7
+
+         /*var palindromo = (word) => { let palin = word.split("").reverse().join(''); return word == palin ? (true):(false);}      
+                    
+         console.log(palindromo("salas")); */
+         
+         //Solucion 8
+
+         var solucionOcho = (text, borra) => {
+             if (typeof text === 'string' && typeof borra === 'string') {
+
+                text = text.split(borra);
+                console.log(text)                 
+             }
+
+         }
+
+         console.log(solucionOcho("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz"))
+  
+
+   </script>
+</body>
+</html>

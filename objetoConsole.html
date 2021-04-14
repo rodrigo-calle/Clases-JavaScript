@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(console)
+        console.error("Esto es un error");
+        console.warn("Esto es una advertencia")
+        console.info("Esot es un info")
+
+        let nombre = "Rodrigo";
+            apellido = "Calle";
+            edad = 23;
+
+            console.log(nombre, apellido, edad);
+            console.log(`Hola mi nombre es: ${nombre} ${apellido} y tengo ${edad} años`);
+            console.log(`Hola mi nombre es %s %s y tengo %d años`, nombre, apellido, edad);
+        console.clear();
+
+        console.log(window);
+        console.log(document);
+        console.dir(window);
+        console.dir(document);
+        console.clear();
+
+        console.group("Cursos de @tiempodecodear");
+        console.log("Curso JAVA");
+        console.log("Curso HTML");
+        console.groupEnd();
+        console.clear();
+
+        console.log(console);
+        console.table(Object.entries(console).sort());
+
+        const numeros = [1,2,3,4,5],
+        vocales = ["a", "e", "i", "o", "u"];
+
+        console.table(numeros);
+        console.table(vocales);
+
+        const perro ={
+            nombre: "Balto", 
+            raza: "Cruzado", 
+            color: "Naranaj-brown"
+        }
+        console.table(perro);
+        console.clear();
+
+       /*  console.time('Cuanto tiempo tarda mi código');
+        const arreglo = Array(10000);
+        for(let i = 0; i < arreglo.length; i++){
+          arreglo[i] = i;  
+        }
+     
+        console.timeEnd("Cuanto tiempo tarda mi código");
+        console.log(arreglo);  */
+        console.clear();
+
+      /*   for (let i = 0; i < 100; i++) {
+            console.count("codigo for");
+            console.log(i);
+            
+        } */
+
+        let x = 5;
+        y = 2; 
+        pruebaXY = "Se espera que X siempre sea menor que Y";
+
+        console.assert(x<y, {x,y, pruebaXY});
+
+    </script>
+</body>
+</html>

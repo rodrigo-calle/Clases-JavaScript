@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERENCIA JS</title>
+</head>
+<body>
+    <script>
+        //creando objeto persona con el método contructor
+     /*    function Persona(nombrePila, apellido, edad, genero, intereses) {
+            this.nombre = {
+                nombrePila, 
+                apellido
+            };
+            this.edad = edad;
+            this.genero = genero;
+            this.intereses = intereses;
+            
+        }
+        //declaración de metodos para el objeto con prototipe
+        Persona.prototype.saludo = function() {
+            alert('hola soy ' + this.nombre + '.');
+        } */
+
+        //var p1 = new Persona("Rodrigo", "Calle",  22, "masculino", "programación" );//instanciando objeto
+
+        //heredaremos a Profesor aributos y metodos de la funcion constructora Persona
+/* 
+        function Profesor(nombrePila, apellido, edad, genero, interese, materia) {
+            Persona.call(this, nombrePila, apellido, edad, genero, interese);
+            this.materia = materia;            
+        }
+
+        //console.log(Object.getOwnPropertyNames(Persona.prototype));//los metodos de persona no estan siendo heredado
+
+        //heredando metodos de Persona
+        Profesor.prototype = Object.create(Persona.prototype);
+       //dando propiedades de constructor
+       Profesor.prototype.constructor = Profesor;
+
+       //definiendo nuevo método saludo a Profesor
+       Profesor.prototype.saludo = function () {
+
+             var prefijo;
+
+            if (this.genero === 'masculino' || this.genero === 'Masculino' || this.genero === 'm' || this.genero === 'M') {
+                prefijo = 'Sr.';
+            } else if (this.genero === 'female' || this.genero === 'Femenino' || this.genero === 'f' || this.genero === 'F') {
+                prefijo = 'Sra.';
+            } else {
+                prefijo = 'Sx.';
+            }
+
+            alert('Hola. Mi nombre es ' + prefijo + ' ' + this.nombre.apellido + ', y enseño ' + this.materia + '.');
+       };
+
+
+       var profesor1 = new Profesor("Rodrigo", "Calle", 22, "Masculino", ['Informática', 'Música', 'Futbol'], "Programación" ); */
+       //Instanciando objeto tudent
+      /*  function Student(nombrePila, apellido, edad, genero, intereses, score) {
+           Persona.call(this, nombrePila, apellido, edad, genero, intereses)
+           this.score = score;
+        
+       }
+
+       Student.prototype.saludo = function(){console.log("Hola soy un estudiante")}; */
+       //DECLANDO OBJETOS Y HERENCIA CON  CLASS
+       class Teacher{
+           constructor(codigo, nombre, area){
+               this.codigo = codigo;
+               this.nombre = nombre;
+               this.area = area;
+
+           }
+
+                get codigo(){
+                   return this.codigo;
+                }
+
+                set codigo(newCodigo){
+                    this.codigo = newCodigo;
+                }
+
+                saludo() {
+               console.log(`Hola mi nombre es ${this.nombre}` );
+            }
+       }
+
+      /*  var teacher1 = new Teacher(001, "Rodrigo", "Informática");
+       teacher1.saludo() */
+       //heredando teacher en asistente
+       class Asistente extends Teacher{
+           constructor(codigo, nombre, area, edad){
+            super(codigo, nombre, area)
+            this.edad = edad;
+           }
+
+
+           
+       }
+       var asis = new Asistente("002", "Cesar", "Informática", 25);
+
+       console.log(asis.saludo())
+      
+       console.log( snape.codigo("noas"))
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

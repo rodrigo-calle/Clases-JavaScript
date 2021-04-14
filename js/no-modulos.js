@@ -1,0 +1,1 @@
+console.log("Navegados no soporta módulos ECMAS6");

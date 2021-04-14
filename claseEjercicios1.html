@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios 1</title>
+</head>
+<body>
+    <!-- 1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+    2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+    3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+    4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo. -->
+    <script>
+        //Solución 1.
+      /*   function preguntaOne(entrada) {
+            var contador = 0;
+          if (typeof entrada === 'string') { 
+            return entrada.length;
+          }else if (typeof entrada === 'object') {
+            //en caso de ser object(array)
+            entrada.forEach(element => {
+                  contador = contador+1;                
+            });
+              return contador;
+          }else{
+              return console.log("Debe ingresar un input válido");
+          }
+
+            
+        }
+     
+        let perro2 = ["balto", 1, "marron"];
+
+        console.log(preguntaOne(perro2)); */
+        
+        //SOlución 2
+      
+
+      /*   function preguntaDos(input, number) {
+            if(typeof input === "string"){
+                input = input.slice(0, number);
+                return input;
+            
+            }else{
+                console.log("Tiene que insertar un string");
+            }       
+          
+            
+        }
+        console.log(preguntaDos("hola mundo!",4)); */
+
+
+        //Solucion 3
+/* 
+        function preguntaTres(input) {
+            let arr = [];
+            if (typeof input === 'string') {
+                arr = input.split(' ');
+                console.log(arr);
+            }else{
+                return console.log("Debe ingresar un dato tipo texto(string)");
+            }
+            
+        }
+
+        console.log(preguntaTres("hola como estas"));//respuesta ["hola", "como", "estas"] */
+        console.clear();
+        //Solucion 4
+        function preguntaCuatro(text, number) {
+            for (let i = 0; i < number; i++) {
+               console.log(text)  
+            
+            } 
+        }
+
+        console.log(preguntaCuatro("hola viejo", 2));
+
+     
+
+
+
+   
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //GETTERS AND SETTERS
+        //metodo estatico se ejecuta sin necesidad de instaciar la clase
+        class Persona{
+            constructor(nombre, apellido){
+                this.nombre = nombre;
+                this.apellido = apellido;
+            }
+
+            static saludo(){
+                console.log("Hola como estás");
+            }
+             //los getters y setters son métodos especiales que nos permiten establecer y obtener los valores de atributos de nuestra clase.
+
+             get getNombre(){
+                 return this.nombre;
+             }
+             set setNombre(nombreEditado){
+                 this.nombre = nombreEditado;
+             }
+
+
+        }
+
+        function Maestro(name, lastname) {
+            this.name = name;
+            this.lastname = lastname;
+            
+        }
+
+
+
+        ma = new Maestro("Rodrigo Cesar", "Calle Castillo");
+        per = new Persona("Rodrigo", "Calle");
+
+        ma.lastname = "Casetas"
+        console.log(ma.lastname);
+
+        
+        console.log(per.getNombre);
+        per.setNombre = "Cesar";
+        console.log(per.getNombre);
+
+
+
+        //Persona.saludo();//método static
+
+        //los getters y setters son métodos especiales que nos permiten establecer y obtener los valores de atributos de nuestra clase.
+
+        
+    </script>
+    
+</body>
+</html>
