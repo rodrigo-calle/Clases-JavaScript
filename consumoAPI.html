@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+
+    <div id="ulListado">
+
+    </div>
+    <script>
+    const $lista=document.getElementById("ulListado"); 
+ const consumo = fetch('http://rodrigocalle.atwebpages.com/index.php/productos')
+                     .then(response => response.json())
+                     .then(json => console.log(json))
+                     
+
+
+
+            /*     .then((res)=>{
+                    console.log(res)
+                    return res.text();
+                })
+                .then((json)=>{
+                    console.log(json);
+                    $lista.innerHTML = json;
+                })
+ */
+   
+                      /* .then(response => response.json())
+                     .then(json => document.write(json))
+                      */
+                    
+     //console.log(consumo) 
+     //document.write(consumo) 
+    // console.log(typeof(consumo))
+     //
+
+/*      function agregarElementos(){ 
+    var lista=document.getElementById("ulListado"); 
+    consumo.forEach(function(data,index){
+    var linew= document.createElement("li");    
+    var contenido = document.createTextNode(data.nombre+' '+data.modelo+" "+data.sistema_operativo+" "+data.pantalla_pulgadas+" "+data.pantalla_resolucion+" "+data.camara_resolucion);
+    lista.appendChild(linew);
+    linew.appendChild(contenido);
+
+    })
+    } */
+ /*    function getPosts() {
+    return new Promise(function(resolve, reject) {
+        var req = new XMLHttpRequest();
+            req.open('GET', 'http://rodrigocalle.atwebpages.com/index.php/productos');
+
+            req.onload = function() {
+            if (req.status == 200) {
+                resolve(JSON.parse(req.response));
+            }
+            else {
+                reject();
+            }
+            };
+
+            req.send();
+        })
+    }
+
+    
+    getPosts().then(r =>{        
+        console.log(r);
+    }).catch(() => {
+        console.log('Algo salió mal');
+    })
+           */
+/* 
+    function agregarElementos(){ 
+    var lista=document.getElementById("ulListado"); 
+    array.forEach(function(data,index){
+    var linew= document.createElement("li");    
+    var contenido = document.createTextNode(data.marca+' '+data.modelo+" "+data.sistema_operativo+" "+data.pantalla_pulgadas+" "+data.pantalla_resolucion+" "+data.camara_resolucion);
+    lista.appendChild(linew);
+    linew.appendChild(contenido);
+
+    })
+    }
+    agregarElementos(); */
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nuevos tipos de datos JS</h1>
+    <script>
+        //SYMBOLS
+        //generan un valor unico a pesar de que los valores sean los mismos
+
+       /*  let id = Symbol("id");
+        let id2 = Symbol("id2");
+
+        console.log(id === id2);
+        console.log(id, id2);
+        console.log(typeof id, typeof id2);
+
+        const NOMBRE = Symbol();
+        const SALUDAR = Symbol("Saludar");
+
+        const persona = {
+            [NOMBRE] : "Rodrigo",
+            edad:23
+        }
+        console.log(persona);
+
+        persona.NOMBRE = "Rodrigo Calle"
+        console.log(persona.NOMBRE);
+        console.log(persona[NOMBRE]);
+
+        persona[SALUDAR] = function () {
+            console.log("hola QUE TAL?");       
+        }
+        persona[SALUDAR]();
+
+        for(let propiedad in persona){
+            console.log(propiedad);
+            console.log(persona[propiedad]);
+        }
+        console.log(Object.getOwnPropertySymbols(persona)); */
+        //SET
+    /*  const set = new Set([1,2,3,3,true,false,false,[],[], "hola", "HOLA"]);
+        console.log(set)
+        const set2 = new Set();
+        set2.add(1);
+        set2.add(1);
+        set2.add(2);
+        set2.add(true);
+        set2.add(false);
+        set2.add(true);
+        set2.add({});
+        console.log(set2);
+        console.log("--------------")
+        for(item of set){
+            console.log(item);
+        }
+        console.log("--------------")
+        set2.forEach(element => {
+            console.log(element);
+        });
+        var  arr = Array.from(set)
+        console.log("--------------")
+        console.log(arr);
+
+        set.delete("hola")
+        console.log(set);
+
+        console.log(set.has("hola"));
+        set2.clear();
+        console.log(set2); */
+
+      /*   let mapa = new Map();
+       
+        mapa.set("nombre", "Rodrigo");
+        mapa.set("apellido", "Calle");
+        mapa.set("edad", 23)
+        console.log(mapa)
+        console.log(mapa.size)
+        console.log(mapa.has("nombre"))
+        console.log(mapa.has("celular"))
+        console.log(mapa.get("nombre"))
+       
+        mapa.set("nombre", "Rodrigo Cesar")
+        console.log(mapa.get("nombre"))
+       //mapa.delete("apellido")
+        mapa.set(19, "diecinueve");
+        mapa.set(false, "falso");
+        mapa.set({},{})
+        console.log(mapa)
+        
+        for (let [key, value] of mapa) {
+            console.log(`Llave: ${key}, Valor ${value}`);
+        }
+
+        const mapa2 = new Map([
+            ["nombre", "Balto"],
+            ["edad", 5]
+         ]            
+        )
+        console.log(mapa2);
+        const llavesMapa2 = [...mapa2.keys()]; */
+ 
+        
+    </script>
+</body>
+</html>

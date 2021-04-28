@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <script>
+        const persona ={
+            nombre:"",
+            apellido:"",
+            edad:0
+        }
+        //cons el handler consigurado puedes a traves del proxie hacer validaciones para la instaciación de objetos
+        const handler = {
+            set(obj,propiedades,valor){
+                if (Object.keys(obj).indexOf(propiedades) === -1) {
+                   return console.error(`La propiedad "${propiedades}" no existe en el objeto persona`);
+                }
+                if (
+                    (propiedades === "nombre" || propiedades === "apellido") && 
+                    !(/^[A-Za-zÑñÁáÉéÍíÓóÚú§6tA\S]+$/g.test(valor))
+                    ){
+                    return consoles.error(`La propiedad "${propiedades}" solo acepta letras y espacios en blancos`)
+                    }
+                obj[propiedades] = valor;
+            }
+        }
+        const rodrigo = new Proxy(persona,handler);
+        rodrigo.nombre = "Rodrigo";
+        rodrigo.apellido = "Calle1ñ";
+        rodrigo.edad = 22
+        //rodrigo.twitter = "@rodrigocesar";
+        console.log(rodrigo);
+    </script>
+    
+</body>
+</html>

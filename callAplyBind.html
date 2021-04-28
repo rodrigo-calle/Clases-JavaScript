@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <script>
+        console.log(this);
+        this.lugar = "Contexto global"
+        
+        function saludar(saludo, aQuien) {
+            console.log(`${saludo} ${aQuien} desde el ${this.lugar}`);
+        }
+
+        saludar();
+        const obj = {
+            lugar:"Contexto Objeto"
+        }
+
+        saludar.call(obj, "HOLA", "rodrigo");
+        saludar.apply(null, ["Adios","Rodrigo"])//regresa con null o this al contexto global
+
+        const persona = {
+            nombre:"Rodrigo",
+            saludar : function(){
+                console.log(`hola ${this.nombre}`)
+            }            
+        }
+
+        persona.saludar();
+
+        const otraPersona={
+            saludar: persona.saludar.bind(persona)//bind enlaza el contexto
+            
+        }
+        otraPersona.saludar();
+    </script>    
+</body>
+</html>

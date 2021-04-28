@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="#">
+
+</head>
+<body>
+    <script>
+        let aleatorio = Math.round(Math.random()*100+5)
+        const objUsuarios = {
+            propiedad: "Valor",
+            [`id_${aleatorio}`]:"Valor Aleatorio"
+        }
+        const usuarios = ["Rodrigo", "Paola", "Gloria", "Valeria", "Mariagracia"];
+
+        usuarios.forEach((usuario,index)=>objUsuarios[`id_${index}`]= usuario)       
+        console.log(objUsuarios);
+    </script>
+</body>
+</html>

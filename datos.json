@@ -1,0 +1,14 @@
+{
+    "cadena":"Rodrigo",
+    "numero":23,
+    "booleano":true,
+    "arreglo":["correr", "programar", "cocinar"]
+    ,
+    "objeto":{
+        "facebook": "Rodrigo Calle",
+        "instagram": "RodCode98"
+    },
+    "nulo":null
+    
+
+}
