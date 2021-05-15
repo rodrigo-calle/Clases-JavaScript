@@ -74,6 +74,7 @@ img{
     /* De la Izquierda */
     transform: translate(-100%, 0);
     transition: transform.3s ease;
+    overflow-y: auto;
 
     
 }
@@ -212,20 +213,20 @@ img{
 }
 
 
+/*************Netwok Status************/
+.online,
+.offline{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: green;
+    color: wheat;
+}
 
-
-/* .cabecera{
-   background-color: #FFE200 ;
-   padding:20px ;
-   text-align: center;
-   font-size: 35px;
-   font-weight: bold;
-} */
-/* .boton-hamburguesa{
-    padding: 30px;
-    background-color: #FFE200 ;
-    border-radius: 50%;
-    border-color: #FFE200;
-    font-weight: bold; 
-    font-size: 15px;  
-} */
+.offline{
+    background-color: red;    
+}
