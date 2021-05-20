@@ -10,6 +10,10 @@ import userDeviseInfo from "./deteccion_dispositivos.js";
 import networkStatus from "./deteccion_red.js";
 import webCam from "./deteccion_webcam.js";
 import getGeolocation from "./geolocalizacion.js";
+import searchFilters from "./filtro_busquedas.js";
+import lottery from "./sorteo_digital.js";
+import slider from "./carruse.js";
+import scrollSpy from "./scroll_espia.js";
 
 const d = document;
 
@@ -47,6 +51,10 @@ d.addEventListener("DOMContentLoaded", (e)=>{
     userDeviseInfo("user-device");
     webCam("webcam");
     getGeolocation("geolocation");
+    searchFilters(".card-filter", ".card");
+    lottery(".obtener-ganador")
+    slider();    
+    scrollSpy();
     });
   
 d.addEventListener("DOMContentLoaded", (e)=>{
@@ -66,6 +74,14 @@ d.addEventListener("keydown", e =>{
 
 darkTheme(".dark-theme-btn", "dark-mode");
 networkStatus();
+/*let r = [];
+document.querySelectorAll(".item").forEach(el => {
+    r.push(el.textContent)
+    console.log( el.textContent)
+
+})
+
+console.log(r)*/
 
 
 //hamburguerMenu(".panel-btn", ".panel");
