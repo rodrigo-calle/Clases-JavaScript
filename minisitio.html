@@ -37,8 +37,8 @@
               <a href="#seccion11"data-scroll-spy >Sorteo Digital</a>
               <a href="#seccion12"data-scroll-spy >Responsive Slider</a>
               <a href="#seccion13"data-scroll-spy >Video Inteligente</a>
-              <a href="#seccion14"data-scroll-spy >sección 14</a>
-              <a href="#seccion15"data-scroll-spy >sección 15</a>
+              <a href="#seccion14"data-scroll-spy >Validacion de Formularios</a>
+              <a href="#seccion15"data-scroll-spy >Narrador</a>
 
           </nav>
       </aside>
@@ -179,18 +179,41 @@
         </section>
         <section id="seccion13" class="section" data-scroll-spy>
             <h2>Video Inteligente</h2>
-                <video src="multimedia/onepiece.mp4" muted controls loop></video>
+                <video src="multimedia/onepiece.mp4" muted controls loop data-smart-video></video>
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                
+                <video src="multimedia/onepiece.mp4" muted controls loop data-smart-video></video>
         </section>
         <section id="seccion14" class="section" data-scroll-spy>
-            <h2></h2>
+            <h2>Validación de Formularios</h2>
+            <form class="contact-form" target="_blank" action="https://formsubmit.co/rodrigoc_0@hotmail.com" method="POST">
+                <legend>Envíanos tus comentarios</legend>
+                <input type="text"name="name" placeholder="Escribe tu nombre" title="Nombre solo acepta letras y espacios en blanco" required pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+                <input type="email" name="email" placeholder="Escribe tu email" title="Email solo acepta emails validos" required pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+                <input type="text" name="subject" placeholder="Asunto a tratar" title="Asunto es requerido" required>
+                <textarea name="comments" id="" cols="50" rows="5" placeholder="Escribe tus comentarios" required data-pattern="^.{1,255}$"  title="Tu comentario no debe exeder los 255 caracteres"></textarea>
+                <input type="submit" value="Enviar">
+                <div class="contact-form-loader none">
+                    <img src="./multimedia/rings.svg" alt="Cargando">
+                </div>
+                <div class="contact-form-response none">
+                    <p>Los datos han sido enviados</p>
+                </div>
+            </form>
         </section>
         <section id="seccion15" class="section" data-scroll-spy>
-            <h2></h2>
+            <h2>Narrador</h2>
+            <select name="" id="speech-select">
+                <option value="">--Elija un Voz--</option>
+            </select>
+            <br><br>
+            <textarea name="" placeholder="Igresa texto para leerlo" id="speech-select" cols="50" rows="5">
+
+            </textarea>
+            <button id="speech-btn">Leer Texto</button>
         </section>
 
       </main>
+      <!--FORM SUBMIT-->
       <!--CAracter ASCI/// coverr for videos-->
       <button class="scroll-top-btn hidden">&#11014;</button>
       <button class="dark-theme-btn">🌙</button>

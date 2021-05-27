@@ -14,6 +14,9 @@ import searchFilters from "./filtro_busquedas.js";
 import lottery from "./sorteo_digital.js";
 import slider from "./carruse.js";
 import scrollSpy from "./scroll_espia.js";
+import smartVideo from "./video_inteligente.js";
+import contactFormValidations from "./validaciones_formulario.js";
+import speechReader from "./narrador.js";
 
 const d = document;
 
@@ -55,6 +58,8 @@ d.addEventListener("DOMContentLoaded", (e)=>{
     lottery(".obtener-ganador")
     slider();    
     scrollSpy();
+    smartVideo();
+    contactFormValidations();
     });
   
 d.addEventListener("DOMContentLoaded", (e)=>{
@@ -74,6 +79,7 @@ d.addEventListener("keydown", e =>{
 
 darkTheme(".dark-theme-btn", "dark-mode");
 networkStatus();
+speechReader();
 /*let r = [];
 document.querySelectorAll(".item").forEach(el => {
     r.push(el.textContent)
